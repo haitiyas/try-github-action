@@ -1,19 +1,19 @@
-name: Scheduled Test
-on:
-  schedule:
-    - cron: "10 09 * * *"
-jobs:
-  test:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup Go
-        uses: actions/setup-go@v2
-        with:
-          go-version: "1.16.6" # The Go version to download (if necessary) and use.
-      - name: Check Go version
-        run: |
-          go version
-      - name: Run Test
-        run: |
-          make test
+# name: Scheduled Test
+# on:
+#   schedule:
+#     - cron: "10 09 * * *"
+# jobs:
+#   test:
+#     runs-on: self-hosted
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Setup Go
+#         uses: actions/setup-go@v2
+#         with:
+#           go-version: "1.16.6" # The Go version to download (if necessary) and use.
+#       - name: Check Go version
+#         run: |
+#           go version
+#       - name: Run Test
+#         run: |
+#           make test
